@@ -16,8 +16,6 @@ Our system supports the following functionalities:
 * Medical Equipment Availability
 * Staff Member Shifts Management
 * Inventory Management
-* Financial Management
-* Financial Aid Feature
 * Previous/New workplaces for staff
 * Patient Scheduler/Categorizer
 ## Installation
