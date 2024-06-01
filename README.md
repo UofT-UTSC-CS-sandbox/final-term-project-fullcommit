@@ -35,11 +35,11 @@ Docker (optional): Containerization platform.
 
 
 ## Technology Stack
-MERN Tech stack
-M - MongoDB
-E - Express.js
-R - ReactJs
-N - Nodejs
+MERN Tech stack <br>
+M - MongoDB <br>
+E - Express.js <br>
+R - ReactJs <br>
+N - Nodejs <br>
 
 ## Contribution
 * We use Git Flow.
