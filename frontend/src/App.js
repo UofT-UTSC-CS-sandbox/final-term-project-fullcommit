@@ -5,7 +5,7 @@ import EquipmentAvailability from './pages/EquipmentAvailability';
 import ShiftsManager from './pages/ShiftsManager';
 import InventoryManagement from './pages/InventoryManagement';
 import Workplaces from './pages/Workplaces';
-import PatientRegistry from './pages/PatientRegistry';
+import PatientScheduler from './pages/PatientScheduler';
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
             <li><Link to="/shifts-manager">Shifts Manager</Link></li>
             <li><Link to="/inventory-management">Inventory Management</Link></li>
             <li><Link to="/workplaces">Workplaces</Link></li>
-            <li><Link to="/patient-registry">Patient Registry</Link></li>
+            <li><Link to="/patient-scheduler">Patient Scheduler</Link></li>
           </ul>
         </nav>
       </div>
@@ -29,7 +29,7 @@ const App = () => {
         <Route path="/shifts-manager" element={<ShiftsManager />} />
         <Route path="/inventory-management" element={<InventoryManagement />} />
         <Route path="/workplaces" element={<Workplaces />} />
-        <Route path="/patient-registry" element={<PatientRegistry />} />
+        <Route path="/patient-scheduler" element={<PatientScheduler />} />
       </Routes>
     </Router>
   );

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 // import components
 import PatientDetails from '../components/PatientDetails'
 
-const PatientRegistry = () => {
+const PatientScheduler = () => {
   const [patients, setPatients] = useState(null)
 
     useEffect(() => {
@@ -20,8 +20,8 @@ const PatientRegistry = () => {
     }, [])
 
     return (
-      <div className="patientregistry">
-          <h2>Patient Registry</h2>
+      <div className="patientscheduler">
+          <h2>Patient Scheduler</h2>
           {patients && patients.map((patient) => (
               <PatientDetails key={patient._id} patient={patient} />
           ))}
@@ -29,4 +29,4 @@ const PatientRegistry = () => {
   )
 };
 
-export default PatientRegistry;
+export default PatientScheduler;
