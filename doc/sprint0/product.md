@@ -22,43 +22,37 @@ The global market for hospital management systems is projected to grow significa
 
 #### Q2: Who are your target users? (2-3 personas)
 
-Basically, there are three types:
-
-Hospital Managers. Needs: Efficiently manage hospital operations, including staff schedules, resource allocation, and patient assignments.
-
-Physicians. Needs: Access to comprehensive patient records, availability of medicines and medical equipment, and efficient communication with colleagues.
-
+Basically, there are three types:  
+Hospital Managers. Needs: Efficiently manage hospital operations, including staff schedules, resource allocation, and patient assignments.  
+Physicians. Needs: Access to comprehensive patient records, availability of medicines and medical equipment, and efficient communication with colleagues.  
 Inventory Managers. Needs: Manage medical supplies, track inventory levels, and predict future stock needs to ensure the availability of critical medical resources.
 
-Persona 1: James, age 45, Hospital Manager.
-
+Persona 1: James, age 45, Hospital Manager.  
 James has been managing the hospital for the past 10 years. He has a background in healthcare administration. He oversees all administrative aspects of the hospital, ensuring smooth operations and efficient use of resources.
 He starts his day early, reviewing the hospital's daily operations report and attending morning meetings with department heads. He spends his afternoons addressing staffing issues, managing budgets, and coordinating with suppliers. In the evenings, he often reviews performance metrics and strategizes for upcoming challenges.
 James struggles with the fragmentation of hospital management systems, which makes it difficult to maintain a cohesive operation. He finds it challenging to manage staff schedules and ensure that all departments are adequately staffed at all times.
 
-Persona 2: Emily, age 38, Physician.
-
+Persona 2: Emily, age 38, Physician.  
 Emily is a certified internist working at the Hospital. She has been taking this career for 12 years and specializes in chronic disease management. She is known for her compassionate care and attention to detail.
 Emily starts her day with patient rounds, followed by consultations and treatments in her office. She spends a significant portion of her time updating patient records, prescribing medications, and communicating with other healthcare professionals.
 She is frustrated with the lack of integration between patient records, medication databases, and scheduling systems. It usually takes her a lot of time to track down information, which is tiring and prone to errors. Emily wants a unified system that provides easy access to patient records, medication availability, and diagnostic test results. She would like to improve patient care by having accurate and up-to-date information at her fingertips.
 
-Persona 3: Sarah, age 32, Inventory Manager.
-
+Persona 3: Sarah, age 32, Inventory Manager.  
 Sarah has been working as an inventory manager at the hospital for 5 years. She is responsible for maintaining medical supplies and equipment inventory.
 Sarah’s day involves monitoring inventory levels, placing orders, and coordinating with suppliers to ensure timely delivery of medical supplies. She also conducts regular audits to track usage and identify potential shortages.
 Sarah finds it challenging to manage inventory needs accurately, leading to occasional stockouts or overstock situations. She struggles with manually tracking orders and inventory levels. She believes it would be better if there's an integrated platform to manage inventory efficiently, reducing waste and ensuring that critical supplies are always available.
 
+***
+
 #### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
 
-Our users would choose this platform because it consolidates multiple critical functions into a single, integrated system, improving efficiency and reducing errors.
-
-Time Savings: Physicians can save hours each week by accessing a comprehensive medicine registry that includes alternatives, deprecated drugs, and pricing information, all in one place. This eliminates the need to consult multiple sources or outdated manuals.
-
-Improved Efficiency and Accuracy: Inventory managers benefit from predictive analytics for inventory needs and centralized order management, reducing the likelihood of stockouts or overstock situations. This also ensures timely disposal of expired medicines, maintaining compliance and safety standards.
-
-Enhanced Operational Management: Hospital administrators can efficiently manage staff schedules and performance, ensuring optimal resource allocation and reducing scheduling conflicts. The system's ability to automate patient scheduling and categorization based on health complexity ensures that patients receive timely and prioritized care.
-
+Our users would choose this platform because it consolidates multiple critical functions into a single, integrated system, improving efficiency and reducing errors.  
+Time Savings: Physicians can save hours each week by accessing a comprehensive medicine registry that includes alternatives, deprecated drugs, and pricing information, all in one place. This eliminates the need to consult multiple sources or outdated manuals.  
+Improved Efficiency and Accuracy: Inventory managers benefit from predictive analytics for inventory needs and centralized order management, reducing the likelihood of stockouts or overstock situations. This also ensures timely disposal of expired medicines, maintaining compliance and safety standards.  
+Enhanced Operational Management: Hospital administrators can efficiently manage staff schedules and performance, ensuring optimal resource allocation and reducing scheduling conflicts. The system's ability to automate patient scheduling and categorization based on health complexity ensures that patients receive timely and prioritized care. 
 Currently, users rely on a mix of manual processes, outdated systems, and fragmented tools that are inefficient and prone to errors. Our platform offers a unified, up-to-date, and data-driven solution that streamlines operations and improves overall patient care and hospital management.
+
+***
 
 #### Q4: What does "DONE" means to your Team 
 
