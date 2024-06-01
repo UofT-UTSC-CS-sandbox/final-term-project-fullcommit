@@ -1,7 +1,5 @@
 # YOUR PRODUCT/TEAM NAME
-
- > _Note:_ This document is meant to evolve throughout the planning phase of your project.    
- > That is, it makes sense for you commit regularly to this file while working on the project (especially edits/additions/deletions to the _Highlights_ section).
+Hospital Management Platform/FullCommit
 
 #### Q1: What are you planning to build?
 
@@ -15,6 +13,11 @@ Shifts Manager to efficiently allocate staff shifts and patient assignments.
 Previous/New Workplaces for Staff to provide information on the current and previous workplaces of healthcare professionals for continuity of care.
 Patient Scheduler/Categorizer to prioritize and schedule patients based on their medical needs.
 This integrated platform will ensure that users have access to the necessary information and tools to perform their tasks efficiently and effectively.
+
+## Market Sizing Analysis:
+
+The global market for hospital management systems is projected to grow significantly, driven by increasing healthcare needs and the adoption of advanced technologies. According to IBISWorld(https://www.ibisworld.com/canada/market-research-reports/hospitals-industry/#:~:text=Hospitals%20in%20Canada%20market%20size,estimated%20%2492.4bn%20in%202024.), hospitals in Canada market size (2024-2029) Industry revenue has grown at a CAGR of 1.1% over the past five years, to reach an estimated $92.4bn in 2024.
+
 
 #### Q2: Who are your target users? (2-3 personas)
 
@@ -40,8 +43,6 @@ Sarah finds it challenging to manage inventory needs accurately, leading to occa
 
 #### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
 
-YOUR ANSWER GOES HERE ...
-
 Our users would choose this platform because it consolidates multiple critical functions into a single, integrated system, improving efficiency and reducing errors.
 Time Savings: Physicians like Dr. Sarah Thompson can save hours each week by accessing a comprehensive medicine registry that includes alternatives, deprecated drugs, and pricing information, all in one place. This eliminates the need to consult multiple sources or outdated manuals.
 Improved Efficiency and Accuracy: Inventory managers like John Ramirez benefit from predictive analytics for inventory needs and centralized order management, reducing the likelihood of stockouts or overstock situations. This also ensures timely disposal of expired medicines, maintaining compliance and safety standards.
@@ -65,20 +66,6 @@ Our definition of "done" ensures that the product is fully functional, user-frie
 
 ### Highlights
 
-YOUR ANSWER GOES HERE ...
-
-Specify 3 - 5 key decisions and/or insights that came up during your meetings
-and/or collaborative process. Here are few questions that can guide you
-
- * Short (5 min' read max)
- * Decisions can be related to the product and/or the team process.
-    * Mention which alternatives you were considering.
-    * Present the arguments for each alternative.
-    * Explain why the option you decided on makes the most sense for your team/product/users.
- * Essentially, we want to understand how (and why) you ended up with your current product plan.
- * How did you organise the team? Which tools did you use, if any?
- * How frequently did you meet?
- 
  1. Choosing the Product Idea
 Alternatives Considered: Hospital Management Platform vs. Building Navigation System.
 Arguments for Each Alternative:
@@ -97,7 +84,3 @@ Criteria for Decision are feasibility and Relevance. Features beyond the team's 
 
 4. Feedback Integration and Finalization
 The team shared feedback from the TAs and finalized individual responsibilities. This approach allowed the team to polish the product plan and ensure everyone was clear on their roles, leading to a well-organized final result.
-
-
- 
-  
