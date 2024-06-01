@@ -6,6 +6,8 @@ const express = require('express') // Express framework for creating the server
 const mongoose = require('mongoose') // Mongoose for connecting to MongoDB
 const patientRoutes = require('./routes/patients') // patient routes 
 const employeeRoutes = require('./routes/employees') // employee routes
+const medicineRoutes = require('./routes/medicine') // medicine routes
+
 
 // Create an Express app
 const app = express()
@@ -22,6 +24,7 @@ app.use((req, res, next) => {
 // ROUTES
 app.use('/api/patients', patientRoutes)
 app.use('/api/employees', employeeRoutes)
+app.use('/api/medicine', medicineRoutes)
 
 // CONNECT TO DB
 // Connect to MongoDB using the URI stored in environment variables
