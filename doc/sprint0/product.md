@@ -4,28 +4,21 @@
 
 We are planning to build a comprehensive hospital management platform, a web-based platform designed to streamline and optimize various administrative and clinical processes within a hospital. This system will address key challenges faced by healthcare providers, such as managing medicine inventories, scheduling staff shifts, tracking patient records, and coordinating medical equipment availability.
 
-The product will serve as a central hub for hospital managers, physicians, and inventory managers by providing the following features:
-
-Staff Registry to manage the addition and removal of staff members, facilitate communication between colleagues, and enable physicians to refer patients to specialists.
-
-Patient Registry to maintain detailed patient records, including vaccine shots, blood work tests, appointment history, and physician notes.
-
-Medicine Registry to track the availability, alternatives, and pricing of medications, including discontinued or expired drugs.
-
-Medical Equipment Availability tracker to monitor the availability of critical medical equipment, including hospital beds.
-
-Shifts Manager to efficiently allocate staff shifts and patient assignments.
-
-Previous/New Workplaces for Staff to provide information on the current and previous workplaces of healthcare professionals for continuity of care.
-
-Patient Scheduler/Categorizer to prioritize and schedule patients based on their medical needs.
-
+The product will serve as a central hub for hospital managers, physicians, and inventory managers by providing the following features:  
+Staff Registry to manage the addition and removal of staff members, facilitate communication between colleagues, and enable physicians to refer patients to specialists.  
+Patient Registry to maintain detailed patient records, including vaccine shots, blood work tests, appointment history, and physician notes.  
+Medicine Registry to track the availability, alternatives, and pricing of medications, including discontinued or expired drugs.  
+Medical Equipment Availability tracker to monitor the availability of critical medical equipment, including hospital beds.  
+Shifts Manager to efficiently allocate staff shifts and patient assignments.  
+Previous/New Workplaces for Staff to provide information on the current and previous workplaces of healthcare professionals for continuity of care.  
+Patient Scheduler/Categorizer to prioritize and schedule patients based on their medical needs.  
 This integrated platform will ensure that users have access to the necessary information and tools to perform their tasks efficiently and effectively.
 
 ##### Market Sizing Analysis:
 
 The global market for hospital management systems is projected to grow significantly, driven by increasing healthcare needs and the adoption of advanced technologies. According to IBISWorld(https://www.ibisworld.com/canada/market-research-reports/hospitals-industry/#:~:text=Hospitals%20in%20Canada%20market%20size,estimated%20%2492.4bn%20in%202024.), hospitals in Canada market size (2024-2029) Industry revenue has grown at a CAGR of 1.1% over the past five years, to reach an estimated $92.4bn in 2024.
 
+***
 
 #### Q2: Who are your target users? (2-3 personas)
 
