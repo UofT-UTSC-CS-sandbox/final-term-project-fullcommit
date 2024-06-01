@@ -19,19 +19,19 @@ Our system supports the following functionalities:
 * Previous/New workplaces for staff
 * Patient Scheduler/Categorizer
 ## Installation
-Git: Version control system.
-Node.js and npm: JavaScript runtime and package manager.
-MongoDB: NoSQL database.
-Express.js: Backend framework.
-React: Frontend framework.
-Visual Studio Code: Source-code editor.
-Postman/ThunderClient: API testing tool.
-Webpack: Module bundler.
-ESLint: Linting tool.
-Prettier: Code formatter.
-Enzyme (Optional: React testing utility.
-Redux (optional): State management.
-Docker (optional): Containerization platform.
+Git: Version control system. <br>
+Node.js and npm: JavaScript runtime and package manager.<br>
+MongoDB: NoSQL database.<br>
+Express.js: Backend framework.<br>
+React: Frontend framework.<br>
+Visual Studio Code: Source-code editor.<br>
+Postman/ThunderClient: API testing tool.<br>
+Webpack: Module bundler.<br>
+ESLint: Linting tool.<br>
+Prettier: Code formatter.<br>
+Enzyme (Optional: React testing utility.<br>
+Redux (optional): State management.<br>
+Docker (optional): Containerization platform.<br>
 
 
 ## Technology Stack
@@ -44,7 +44,7 @@ N - Nodejs <br>
 ## Contribution
 * We use Git Flow.
 * Pull requests will be used to review potential merges of branches when features are being done.
-* The typical naming conventions (i.e feat, bugfix, etc) will be used when naming branches. An example would be feat/user-authentication.
+* The typical naming conventions (i.e feat, bugfix, etc) will be used when naming branches. An example would be "feat/user-authentication".
 * Hyphens will be used to separate words when naming branches and '/' will be used to categorize branches heirarchically.
 * We use Jira as our ticketing website.
-* Each commit message starts with a keyword, followed by a detailed description of the changes made.
+* Each commit message starts with a keyword, followed by a detailed description of the changes made. For example, "chore: prettier".
