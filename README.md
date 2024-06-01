@@ -19,14 +19,32 @@ Our system supports the following functionalities:
 * Previous/New workplaces for staff
 * Patient Scheduler/Categorizer
 ## Installation
-TBD
+Git: Version control system.
+Node.js and npm: JavaScript runtime and package manager.
+MongoDB: NoSQL database.
+Express.js: Backend framework.
+React: Frontend framework.
+Visual Studio Code: Source-code editor.
+Postman/ThunderClient: API testing tool.
+Webpack: Module bundler.
+ESLint: Linting tool.
+Prettier: Code formatter.
+Enzyme (Optional: React testing utility.
+Redux (optional): State management.
+Docker (optional): Containerization platform.
+
 
 ## Technology Stack
-TBD
+MERN Tech stack
+M - MongoDB
+E - Express.js
+R - ReactJs
+N - Nodejs
 
 ## Contribution
 * We use Git Flow.
-* We don't utilize pull requests.
-* There is no convention for naming branches, but keywords on what is being developed are accepted.
+* Pull requests will be used to review potential merges of branches when features are being done.
+* The typical naming conventions (i.e feat, bugfix, etc) will be used when naming branches. An example would be feat/user-authentication.
+* Hyphens will be used to separate words when naming branches and '/' will be used to categorize branches heirarchically.
 * We use Jira as our ticketing website.
 * Each commit message starts with a keyword, followed by a detailed description of the changes made.
