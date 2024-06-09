@@ -1,0 +1,4 @@
+Project Documents:
+- View .md in VSCode with Ctrl + Shift + p, preview markdown
+Coding:
+Debugging:
