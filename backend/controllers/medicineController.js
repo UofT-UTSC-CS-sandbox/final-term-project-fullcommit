@@ -1,94 +1,90 @@
-const Medicine = require('../models/medicineModel');
-const mongoose = require('mongoose');
+const API_URL = null; // Replace with your actual API base URL
 
-// GET list of all medicines
-const getMedicines = async (req, res) => {
-    try {
-        const medicines = await Medicine.find({});
-        res.status(200).json(medicines);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-};
-
-// GET one medication
-const getMedicine = async (req, res) => {
-    const { id } = req.params;
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({ error: 'No such medicine' });
-    }
-
-    try {
-        const medicine = await Medicine.findById(id);
-        if (!medicine) {
-            return res.status(404).json({ error: 'No such medicine' });
-        }
-        res.status(200).json(medicine);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-};
-
-// CREATE new medicine in db
-const createMedicine = async (req, res) => {
-    const { name, effects, cautions, combinations, dosageForm, manufacturer, activeIngredients } = req.body;
-
-    try {
-        const medicine = await Medicine.create({
-            name,
-            effects,
-            cautions,
-            combinations,
-            dosageForm,
-            manufacturer,
-            activeIngredients,
+// Get all medicines
+export const getMedicines = () => {
+    return fetch(API_URL)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch medicines');
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error('Error fetching medicines:', error);
+            throw error;
         });
-        res.status(201).json(medicine);
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
 };
 
-// DELETE medicine from db
-const deleteMedicine = async (req, res) => {
-    const { id } = req.params;
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({ error: 'No such medicine' });
-    }
+// Get a single medicine by ID
+export const getMedicine = (id) => {
+    return fetch(`${API_URL}/${id}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to fetch medicine with ID ${id}`);
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error(`Error fetching medicine with ID ${id}:`, error);
+            throw error;
+        });
+};
 
-    try {
-        const medicine = await Medicine.findOneAndDelete({ _id: id });
-        if (!medicine) {
-            return res.status(404).json({ error: 'No such medicine' });
+// Create a new medicine
+export const createMedicine = (medicineData) => {
+    return fetch(API_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(medicineData),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to create medicine');
         }
-        res.status(200).json({ message: 'Medicine deleted successfully' });
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
+        return response.json();
+    })
+    .catch(error => {
+        console.error('Error creating medicine:', error);
+        throw error;
+    });
 };
 
-// UPDATE medicine info
-const updateMedicine = async (req, res) => {
-    const { id } = req.params;
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({ error: 'No such medicine' });
-    }
-
-    try {
-        const medicine = await Medicine.findOneAndUpdate({ _id: id }, req.body, { new: true, runValidators: true });
-        if (!medicine) {
-            return res.status(404).json({ error: 'No such medicine' });
+// Update an existing medicine by ID
+export const updateMedicine = (id, medicineData) => {
+    return fetch(`${API_URL}/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(medicineData),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to update medicine with ID ${id}`);
         }
-        res.status(200).json(medicine);
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
+        return response.json();
+    })
+    .catch(error => {
+        console.error(`Error updating medicine with ID ${id}:`, error);
+        throw error;
+    });
 };
 
-module.exports = {
-    getMedicines,
-    getMedicine,
-    createMedicine,
-    deleteMedicine,
-    updateMedicine
+// Delete a medicine by ID
+export const deleteMedicine = (id) => {
+    return fetch(`${API_URL}/${id}`, {
+        method: 'DELETE',
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to delete medicine with ID ${id}`);
+        }
+        return response.json();
+    })
+    .catch(error => {
+        console.error(`Error deleting medicine with ID ${id}:`, error);
+        throw error;
+    });
 };

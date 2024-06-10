@@ -16,6 +16,11 @@ _This entire section is optional. Note that you will have to fill it out and mor
 #### Roles & responsibilities
 
 Describe the different roles on the team and the responsibilities associated with each role.
+- login page (Travis)
+- patient directory (Darren)
+- physician directory (Catherine)
+- profile page for both (Xiaoran)
+- backend (William)
 
 #### Events
 
