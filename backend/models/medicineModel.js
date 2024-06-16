@@ -1,38 +1,49 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const medicineSchema = new Schema({
+const medicineSchema = new Schema(
+  {
     name: {
-        type: String,
-        required: true,
-        unique: true,
+      type: String,
+      required: true,
+      unique: true,
     },
-    effects: [{
+    effects: [
+      {
         type: String,
         required: true,
-    }],
-    cautions: [{
+      },
+    ],
+    cautions: [
+      {
         type: String,
         required: true,
-    }],
-    combinations: [{
+      },
+    ],
+    combinations: [
+      {
         type: String,
         required: true,
-    }],
+      },
+    ],
     dosageForm: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     manufacturer: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
-    activeIngredients: [{
+    activeIngredients: [
+      {
         name: String,
         strength: String,
-    }],
+      },
+    ],
     // Add or modify as needed
-}, { timestamps: true });
+  },
+  { timestamps: true },
+);
 
-module.exports = mongoose.model('Medicine', medicineSchema);
+module.exports = mongoose.model("Medicine", medicineSchema);
