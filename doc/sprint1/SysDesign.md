@@ -6,7 +6,7 @@
 <i> Our Hospital Management web app will use the MERN techstack and an MVC pattern.
 </i>
 
-### Modules: 
+### High Level Over Modules: 
 1. Authentication and Login
 2. Users (Patient, Physician)
 3. Profiles
@@ -23,7 +23,7 @@
 <table>
   <tbody>
     <tr>
-      <th> Class Name </th>
+      <th> Class Name / Modules </th>
       <th> Parent </th>
       <th> Sub </th>
       <th> Responsibilities </th>
@@ -144,14 +144,12 @@
 
 
 ## Environment
-<i> OS Dependencies </i>
-<ul>
-<li> cd backend </li>
-<li> node server.js </li>
-<li> cd frontend </li>
-<li> npm start </li>
-</ul>
-Operating System: Linux (Ubuntu 20.04) 
+OS independent. 
+```npm install``` </br>
+```cd backend/``` </br>
+```node app.js``` </br>
+```cd frontend/``` </br>
+```npm start``` </br>
  
 Programming Languages: JavaScript (Node.js 14)  
 Compilers / Virtual Machines: Node.js for JavaScript  
