@@ -2,6 +2,13 @@
 CSCC01 - UTSC <br>
 
 Group Members: <br>
+Currently:<br>
+Xiaoran Yu <br>
+Darren Guerina <br>
+Catherine Qu <br>
+
+Originally:<br>
+(Unfortunately, two teammates dropped the course on Jun 16 and one teammate dropped the course on Jun 13.)<br>
 William Lam <br>
 Travis Shao <br>
 Xiaoran Yu <br>
