@@ -3,7 +3,7 @@
 ## High-level Overview of Classes
 
 ### Overview:
-<i> We are building a Hospital Management web app. It will use the MERN techstack and an MVC pattern.
+<i> Our Hospital Management web app will use the MERN techstack and an MVC pattern.
 </i>
 
 ### Modules: 
