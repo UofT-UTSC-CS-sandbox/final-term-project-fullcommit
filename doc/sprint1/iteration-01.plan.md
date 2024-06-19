@@ -52,7 +52,17 @@ _This entire section is mandatory._
 Our core aim is prioritizing a visible demonstration.
 * Through out the sprint, work on learning techstack
 * Work on our frontend features / JIRA stories.
-* Holding standups to meet and discuss work on features.
+* Holding standups to meet and discuss work on features.  
+
+User stories:
+* As a physician, I want to know how to contact my colleagues so I can talk to them virtually.
+* As a physician, I want to know the specialties of other physicians so I can refer my patients to them.
+* As a physician, I want to know my patients' last vaccine shots and blood work tests so I can keep them up to date.
+* As a physician, I want to know my patients' last appointment so I can recommend another checkup.
+* As a physician, I want to write notes about my patients for future reference.
+* As a user (physician / patient), I want to be able to view my profile.
+* As a physician, I wish to be able to view different types of medicine.
+* As a physician, I wish to be able to view a directory of all patients.
 
 
 #### Artifacts
@@ -66,8 +76,8 @@ List/describe the artifacts you will produce in order to present your project id
 
   Our Artifacts:
   * Code for features:
-    * Aim to produce frontend features of four main pages (profiles, login screen, user directories, patient scheduling) for demo
-    * Aim to initialize a database. Later on, will connect to the frontend. For the time being, we are setting it up for later sprints.
+    * Aim to produce frontend features of four main pages (profiles, login screen, user directories, patient scheduling) for demo.
+    * Aim to initialize a database. Later on, will connect to the frontend.
     * Aim to setup initial routing so frontend features will be visible.
-  * Hardcoding sample data in users (profiles / directories), as well as sample imagery (profiles)
-  * Aim to finalize documentations for submission
+  * Hardcoding sample data in users (profiles / directories), as well as sample imagery (profiles).
+  * Aim to finalize documentations for submission.
