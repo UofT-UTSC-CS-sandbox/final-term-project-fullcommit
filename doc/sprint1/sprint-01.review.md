@@ -79,7 +79,7 @@ List any process-related changes you are planning to make (if there are any)
    e.g. Did you change your mind, or did you just not get to it yet?
 
 ##### Answer:
- * Database implementation: The teammate who was in charge of the database had to dropped the course, so the current one is temporarily created by us while implementing features. We need to refine and reorganize it in the future.
+ * Database implementation: The teammate who was in charge of the database had to drop the course, so the current one was temporarily created by us while implementing features. We need to refine and reorganize it in the future.
  * Login feature: The situation is similar to our database implementation.
 
 ## Meeting Highlights

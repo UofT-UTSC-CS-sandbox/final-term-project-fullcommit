@@ -2,6 +2,10 @@
 
 ## High-level Overview of Classes
 
+### Overview:
+<i> We are building a Hospital Management web app. It will use the MERN techstack and an MVC pattern.
+</i>
+
 ### Modules: 
 1. Authentication and Login
 2. Users (Patient, Physician)
@@ -60,8 +64,12 @@
 
 ## Environment
 <i> OS Dependencies </i>
-OS: 
-Execute setup.sh in Linux/
+<ul>
+<li> cd backend/ </li>
+<li> node start </li>
+<li> cd frontend </li>
+<li> npm start </li>
+</ul>
 
 ## Component System Architeture: 
 <i> Describe the architecture of the system that is the most abstract view of how your system
@@ -69,6 +77,7 @@ is divided into components and how those components are interconnected. The
 architecture should be described with a diagram showing components and how they are
 related (or equivalent in words). Beware of designs based on a large number of
 components, they may signal a design that is overly complex. </i>
+
 
 ## System Responses
 <i> The system decomposition should relate the system architecture to the detailed design,
@@ -79,7 +88,6 @@ and exceptions, a summary of how the software will respond in these situations. 
 
 ### Errors and Responses:
 * Invalid credentials - user state remains not logged in. Response error notifying incorrect email or password.
-* 
 
 
  
