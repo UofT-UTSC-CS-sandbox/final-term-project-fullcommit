@@ -1,34 +1,18 @@
-// IMPORTS
-const express = require('express')
-
-// import controller functions from patientController file
+const express = require("express");
 const {
-    getEmployees,
-    getEmployee,
-    createEmployee,
-    deleteEmployee,
-    updateEmployee
-} = require('../controllers/employeeController') 
+  getEmployees,
+  getEmployee,
+  createEmployee,
+  deleteEmployee,
+  updateEmployee,
+} = require("../controllers/employeeController");
 
-// CREATE A ROUTER
-const router = express.Router() // instance of the router
+const router = express.Router();
 
-// ADD DIFFERENT REQEST HANDLERS ON TO THE ROUTER
+router.get("/", getEmployees);
+router.get("/:id", getEmployee);
+router.post("/", createEmployee);
+router.delete("/:id", deleteEmployee);
+router.patch("/:id", updateEmployee);
 
-// GET all employees
-router.get('/', getEmployees) 
-
-// GET one employee
-router.get('/:id', getEmployee) 
-
-// POST a new employee
-router.post('/', createEmployee)
-
-// DELETE an employee
-router.delete('/:id', deleteEmployee)
-
-// PATCH a employee
-router.patch('/:id', updateEmployee)
-
-// EXPORT ROUTER
-module.exports = router 
+module.exports = router;
