@@ -8,6 +8,7 @@ import Workplaces from './pages/Workplaces';
 import PatientScheduler from './pages/PatientScheduler';
 import PatientProfile from './pages/PatientProfile';
 import PhysicianProfile from './pages/PhysicianProfile';
+import PatientDirectory from './pages/PatientDirectory';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
             <li><Link to="/patient-scheduler">Patient Scheduler</Link></li>
             <li><Link to="/patient-profile/666b951274a8b4f99a5a9ef5">Sample Patient Profile</Link></li>
             <li><Link to="/physician-profile/666dce53a537510a1ef36e65">Sample Physician Profile</Link></li>
+            <li><Link to="/patient-directory">Patient Directory</Link></li>
           </ul>
         </nav>
       </div>
@@ -36,6 +38,7 @@ const App = () => {
         <Route path="/patient-scheduler" element={<PatientScheduler />} />
         <Route path="/patient-profile/:id" element={<PatientProfile />} />
         <Route path="/physician-profile/:id" element={<PhysicianProfile />} />
+        <Route path="/patient-directory" element={<PatientDirectory />} />
       </Routes>
     </Router>
   );
