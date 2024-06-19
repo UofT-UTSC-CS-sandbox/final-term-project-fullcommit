@@ -63,13 +63,12 @@
 
 
 ## Environment
-<i> OS Dependencies </i>
-<ul>
-<li> cd backend/ </li>
-<li> node start </li>
-<li> cd frontend </li>
-<li> npm start </li>
-</ul>
+```npm install```
+```cd backend/```
+`npm start`
+`cd frontend/`
+`npm start`
+
 
 ## Component System Architeture: 
 <i> Describe the architecture of the system that is the most abstract view of how your system

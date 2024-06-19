@@ -12,9 +12,12 @@ participants</i>
         * Testing: Testing api calls with postman / thunderclient
 * Sprint 3 - July 19th
     * Release goal - bridging frontend and backend.
-    * Key features - data should propagate when entered from the frontend to be saved in the backend.
-    * Key features - retrieval of data should be correct.
+        * Data should propagate when entered from the frontend to be saved in the backend
+        * Efficient and safeguarded retrieval of data
     * Participants:
+        * Coding team ensuring functionality and backlog
+        * Testing team overlooking all parts (past and current sprint's focus)
+        * Entire team discussing demo features.
 * Sprint 4 - Aug 2nd
     * At this point, the fullstack app is fully functional.
     * Participants:
