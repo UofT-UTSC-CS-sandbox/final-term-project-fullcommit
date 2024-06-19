@@ -6,6 +6,7 @@ import ShiftsManager from './pages/ShiftsManager';
 import InventoryManagement from './pages/InventoryManagement';
 import Workplaces from './pages/Workplaces';
 import PatientScheduler from './pages/PatientScheduler';
+import PatientDirectory from './pages/PatientDirectory';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <li><Link to="/inventory-management">Inventory Management</Link></li>
             <li><Link to="/workplaces">Workplaces</Link></li>
             <li><Link to="/patient-scheduler">Patient Scheduler</Link></li>
+            <li><Link to="/patient-directory">Patient Directory</Link></li>
           </ul>
         </nav>
       </div>
@@ -30,6 +32,7 @@ const App = () => {
         <Route path="/inventory-management" element={<InventoryManagement />} />
         <Route path="/workplaces" element={<Workplaces />} />
         <Route path="/patient-scheduler" element={<PatientScheduler />} />
+        <Route path="/patient-directory" element={<PatientDirectory />} />
       </Routes>
     </Router>
   );
