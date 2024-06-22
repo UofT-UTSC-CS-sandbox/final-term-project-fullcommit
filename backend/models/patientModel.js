@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+import Employee from './employeeModel';
 
 // create a new schema
 const Schema = mongoose.Schema
@@ -42,6 +43,7 @@ const patientSchema = new Schema({
         relationship: String,
         phone: String,
     },
+    assignedPhysician: [{type: Schema.Types.ObjectId, ref:'Employee'}],
     currentMedications: [String], // current medications patient is taking
     allergies: [String],
     insuranceProvider: {
@@ -56,4 +58,7 @@ const patientSchema = new Schema({
 }, {timestamps: true}) // timestamp automatically adds when document was created
 
 // MODEL
-module.exports = mongoose.model('Patient', patientSchema) 
+//module.exports = mongoose.model('Patient', patientSchema) 
+// TODO: Fix exports and imports
+// TODO: discuss class inheritance
+module.exports = patientSchema.discriminator('patientUser', Emplyoee);
