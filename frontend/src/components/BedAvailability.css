@@ -1,0 +1,68 @@
+.bed-availability-paper {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #004085;
+    padding-bottom: 5px;
+  }
+  
+  .bed-grid {
+    margin-top: 20px;
+  }
+  
+  .bed-card {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .bed-card.available {
+    border: 2px solid #1aac83;
+  }
+  
+  .bed-card.unavailable {
+    border: 2px solid rgb(226, 65, 65);
+  }
+  
+  .text-available {
+    color: green;
+  }
+  
+  .text-unavailable {
+    color: red;
+  }
+  
+  .button-book {
+    background-color: #1aac83;
+    color: white;
+  }
+  
+  .button-book:hover {
+    background-color: #117a5c;
+  }
+  
+  .button-release {
+    background-color: rgba(83, 83, 203, 0.826);
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .button-release:hover {
+    background-color: rgb(72, 72, 175);
+  }
+  
+  .button-find {
+    background-color: rgb(226, 65, 65);
+    color: white;
+  }
+  
+  .button-find:hover {
+    background-color: rgb(161, 2, 2);
+  }
+  
