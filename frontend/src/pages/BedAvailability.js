@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Grid, Paper, Typography, Button } from '@mui/material';
 import mockBeds from '../components/MockBeds';
-import '../components/BedAvailability.css';
+import '../components/BedEqAvailability.css';
 
 const BedAvailability = () => {
   const [beds, setBeds] = useState(mockBeds);
@@ -25,14 +25,14 @@ const BedAvailability = () => {
   };
 
   return (
-    <Paper className="bed-availability-paper">
+    <Paper className="bedEq-availability-paper">
       <Typography variant="h4" align="center" gutterBottom className="title">
         Hospital Bed Availability
       </Typography>
-      <Grid container spacing={3} className="bed-grid">
+      <Grid container spacing={3} className="bedEq-grid">
         {beds.map((bed) => (
           <Grid item xs={12} sm={6} md={4} key={bed.id}>
-            <Paper className={`bed-card ${bed.available ? 'available' : 'unavailable'}`}>
+            <Paper className={`bedEq-card ${bed.available ? 'available' : 'unavailable'}`}>
               <Typography variant="h5" component="div">
                 {bed.building}
               </Typography>

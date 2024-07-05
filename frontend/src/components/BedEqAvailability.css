@@ -1,4 +1,4 @@
-.bed-availability-paper {
+.bedEq-availability-paper {
     background-color: #ffffff;
     padding: 20px;
   }
@@ -13,20 +13,20 @@
     padding-bottom: 5px;
   }
   
-  .bed-grid {
+  .bedEq-grid {
     margin-top: 20px;
   }
   
-  .bed-card {
+  .bedEq-card {
     padding: 15px;
     text-align: center;
   }
   
-  .bed-card.available {
+  .bedEq-card.available {
     border: 2px solid #1aac83;
   }
   
-  .bed-card.unavailable {
+  .bedEq-card.unavailable {
     border: 2px solid rgb(226, 65, 65);
   }
   

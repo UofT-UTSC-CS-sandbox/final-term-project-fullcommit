@@ -20,7 +20,6 @@ const App = () => {
         <nav>
           <ul>
             <li><Link to="/medicine-registry">Medicine Registry</Link></li>
-            <li><Link to="/equipment-availability">Equipment Availability</Link></li>
             <li><Link to="/shifts-manager">Shifts Manager</Link></li>
             <li><Link to="/inventory-management">Inventory Management</Link></li>
             <li><Link to="/workplaces">Workplaces</Link></li>
@@ -30,6 +29,7 @@ const App = () => {
             <li><Link to="/patient-directory">Patient Directory</Link></li>
             <li><Link to="/Physician-directory">Physician Directory</Link></li>
             <li><Link to="/bed-availability">Bed Availability</Link></li>
+            <li><Link to="/equipment-availability">Equipment Availability</Link></li>
           </ul>
         </nav>
       </div>
