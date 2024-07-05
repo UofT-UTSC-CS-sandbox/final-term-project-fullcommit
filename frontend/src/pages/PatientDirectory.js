@@ -4,7 +4,7 @@ import mockPatients from '../components/PD/MockPatients';
 import SearchBar from '../components/PD/SearchBar';
 import FilterForm from '../components/PD/FilterForm';
 import PatientCard from '../components/PD/PatientCard';
-import '../components/PD/PatientDirectory.css';
+import '../components/PD/PatientDirectory.css'; 
 
 const PatientDirectory = () => {
   const [patients, setPatients] = useState(mockPatients);
@@ -52,7 +52,7 @@ const PatientDirectory = () => {
         Patient Directory
       </Typography>
       <SearchBar search={search} handleSearch={handleSearch} />
-      <FilterForm filters={filters} handleFilterChange={handleFilterChange} directoryType="patient" />
+      <FilterForm filters={filters} handleFilterChange={handleFilterChange} />
       <Grid container spacing={3} className="patient-grid">
         {filteredPatients.map((patient) => (
           <Grid item xs={12} sm={6} md={4} key={patient.id}>
