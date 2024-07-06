@@ -10,7 +10,7 @@ import PatientProfile from './pages/PatientProfile';
 import PhysicianProfile from './pages/PhysicianProfile';
 import PatientDirectory from './pages/PatientDirectory';
 import PhysicianDirectory from './pages/PhysicianDirectory';
-
+import BedAvailability from './pages/BedAvailability';
 
 const App = () => {
   return (
@@ -20,7 +20,6 @@ const App = () => {
         <nav>
           <ul>
             <li><Link to="/medicine-registry">Medicine Registry</Link></li>
-            <li><Link to="/equipment-availability">Equipment Availability</Link></li>
             <li><Link to="/shifts-manager">Shifts Manager</Link></li>
             <li><Link to="/inventory-management">Inventory Management</Link></li>
             <li><Link to="/workplaces">Workplaces</Link></li>
@@ -29,6 +28,8 @@ const App = () => {
             <li><Link to="/physician-profile/666dce53a537510a1ef36e65">Sample Physician Profile</Link></li>
             <li><Link to="/patient-directory">Patient Directory</Link></li>
             <li><Link to="/Physician-directory">Physician Directory</Link></li>
+            <li><Link to="/bed-availability">Bed Availability</Link></li>
+            <li><Link to="/equipment-availability">Equipment Availability</Link></li>
           </ul>
         </nav>
       </div>
@@ -43,6 +44,8 @@ const App = () => {
         <Route path="/physician-profile/:id" element={<PhysicianProfile />} />
         <Route path="/patient-directory" element={<PatientDirectory />} />
         <Route path="/physician-directory" element={<PhysicianDirectory />} />
+        <Route path="/bed-availability" element={<BedAvailability />} />
+
       </Routes>
     </Router>
   );
