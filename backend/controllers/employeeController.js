@@ -31,13 +31,14 @@ const getEmployee = async (req, res) => {
 
 // CREATE new employee in db
 const createEmployee = async (req, res) => {
-    const { firstName, lastName, dateOfBirth, contactNumber, email, address, emergencyContact, role, department, employeeID} = req.body;
+    const { firstName, lastName, dateOfBirth, gender, contactNumber, email, address, emergencyContact, role, department, employeeID} = req.body;
 
     try {
         const employee = await Employee.create({
             firstName,
             lastName,
             dateOfBirth,
+            gender,
             contactNumber,
             email,
             address,
