@@ -4,7 +4,7 @@ import mockPatients from '../components/PD/MockPatients';
 import SearchBar from '../components/PD/SearchBar';
 import FilterForm from '../components/PD/FilterForm';
 import PatientCard from '../components/PD/PatientCard';
-import '../components/PD/PatientDirectory.css'; 
+import '../components/PD/PatientDirectory.css'; //TODO: rename general
 
 const PatientDirectory = () => {
   const [patients, setPatients] = useState(mockPatients);
@@ -51,7 +51,7 @@ const PatientDirectory = () => {
       <Typography variant="h4" align="center" gutterBottom className="title">
         Patient Directory
       </Typography>
-      <SearchBar search={search} handleSearch={handleSearch} />
+      <SearchBar search={search} handleSearch={handleSearch} flag="Patients" />
       <FilterForm filters={filters} handleFilterChange={handleFilterChange} />
       <Grid container spacing={3} className="patient-grid">
         {filteredPatients.map((patient) => (

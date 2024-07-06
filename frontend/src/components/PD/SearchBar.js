@@ -1,10 +1,14 @@
 import React from 'react';
 import { TextField } from '@mui/material';
 
-const SearchBar = ({ search, handleSearch }) => {
+const SearchBar = ({ search, handleSearch, flag}) => {
+  let label = "Search " + flag;
+  // flag == Physicians, Patients
+
+
   return (
     <TextField
-      label="Search Patients"
+      label={label}
       variant="outlined"
       fullWidth
       value={search}
