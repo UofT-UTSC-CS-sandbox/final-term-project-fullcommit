@@ -19,12 +19,18 @@ Catherine Qu <br>
 Hospitals have the duty of saving lives and serving patients by providing the best care possible. It is crucial to equip a powerful management system for hospitals because any management error may cause serious consequences such as delays in patients' treatment or even patient deaths. Therefore, our team aimed to build an ideal management system for hospitals that can be referenced by future developers who will build an actual one.
 
 Our system supports the following functionalities:
-* Medicine Registry
+* Patient Directory
+* Physian Directory
+* Patient Profile
+* Patient Profile
 * Medical Equipment Availability
+* Bed Availability
 * Staff Member Shifts Management
 * Inventory Management
 * Previous/New workplaces for staff
 * Patient Scheduler/Categorizer
+* Medicine Registry (might be removed)
+
 ## Installation
 Git: Version control system. <br>
 Node.js and npm: JavaScript runtime and package manager.<br>
@@ -40,6 +46,11 @@ Enzyme (Optional: React testing utility.<br>
 Redux (optional): State management.<br>
 Docker (optional): Containerization platform.<br>
 
+To run the app:
+- backend:
+node server.js
+- Frontend:
+npm start
 
 ## Technology Stack
 MERN Tech stack <br>
