@@ -11,6 +11,7 @@ import PhysicianProfile from './pages/PhysicianProfile';
 import PatientDirectory from './pages/PatientDirectory';
 import PhysicianDirectory from './pages/PhysicianDirectory';
 import BedAvailability from './pages/BedAvailability';
+import LogAppointmentPage from './pages/LogAppointmentPage';
 
 const App = () => {
   return (
@@ -27,9 +28,10 @@ const App = () => {
             <li><Link to="/patient-profile/666b951274a8b4f99a5a9ef5">Sample Patient Profile</Link></li>
             <li><Link to="/physician-profile/666dce53a537510a1ef36e65">Sample Physician Profile</Link></li>
             <li><Link to="/patient-directory">Patient Directory</Link></li>
-            <li><Link to="/Physician-directory">Physician Directory</Link></li>
+            <li><Link to="/physician-directory">Physician Directory</Link></li>
             <li><Link to="/bed-availability">Bed Availability</Link></li>
             <li><Link to="/equipment-availability">Equipment Availability</Link></li>
+            <li><Link to="/log-appointment">Log Appointment</Link></li> {/* Add a link to Log Appointment */}
           </ul>
         </nav>
       </div>
@@ -45,7 +47,7 @@ const App = () => {
         <Route path="/patient-directory" element={<PatientDirectory />} />
         <Route path="/physician-directory" element={<PhysicianDirectory />} />
         <Route path="/bed-availability" element={<BedAvailability />} />
-
+        <Route path="/log-appointment" element={<LogAppointmentPage />} />
       </Routes>
     </Router>
   );
