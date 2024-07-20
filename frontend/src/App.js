@@ -11,6 +11,9 @@ import PhysicianProfile from './pages/PhysicianProfile';
 import PatientDirectory from './pages/PatientDirectory';
 import PhysicianDirectory from './pages/PhysicianDirectory';
 import BedAvailability from './pages/BedAvailability';
+import SearchAppointment from './pages/SearchAppointment';
+import AppointmentDetails from './pages/AppointmentDetails';
+
 
 const App = () => {
   return (
@@ -30,6 +33,8 @@ const App = () => {
             <li><Link to="/Physician-directory">Physician Directory</Link></li>
             <li><Link to="/bed-availability">Bed Availability</Link></li>
             <li><Link to="/equipment-availability">Equipment Availability</Link></li>
+            <li><Link to="/search-appointment">Search Appointment</Link></li>
+            <li><Link to="/appointment-details">Appointment Details</Link></li>
           </ul>
         </nav>
       </div>
@@ -45,6 +50,8 @@ const App = () => {
         <Route path="/patient-directory" element={<PatientDirectory />} />
         <Route path="/physician-directory" element={<PhysicianDirectory />} />
         <Route path="/bed-availability" element={<BedAvailability />} />
+        <Route path="/search-appointment" element={<SearchAppointment />} />
+        <Route path="/appointment-details" element={<AppointmentDetails />} />
 
       </Routes>
     </Router>
