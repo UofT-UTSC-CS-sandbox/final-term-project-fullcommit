@@ -7,7 +7,7 @@ const path = require('path');
 // Set up Multer for file uploads
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'uploads/');
+        cb(null, 'uploads/'); // Specify the upload directory
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + path.extname(file.originalname));
@@ -15,8 +15,16 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage }).array('files');
 
+// Log a new appointment
+// @route POST /logAppointment
+// @desc Logs a new appointment with the provided details
+// @access Public
 router.post('/logAppointment', appointmentController.logAppointment);
 
+// Upload test files
+// @route POST /uploadTest
+// @desc Uploads files to the server
+// @access Public
 router.post('/uploadTest', (req, res) => {
     upload(req, res, (err) => {
         if (err) {

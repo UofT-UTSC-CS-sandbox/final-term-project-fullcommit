@@ -1,5 +1,18 @@
 # System Design: Physician Collaboration Platform
 
+## Table of Contents
+
+1. [High-level Overview of Classes](#high-level-overview-of-classes)
+   1. [Overview](#overview)
+   2. [High Level Over Modules](#high-level-over-modules)
+   3. [CRC Cards](#crc-cards)
+2. [Environment](#environment)
+3. [Component System Architecture](#component-system-architecture)
+   1. [Components](#components)
+   2. [Relationships](#relationships)
+4. [System Responses](#system-responses)
+   1. [System Decomposition](#system-decomposition)
+
 ## High-level Overview of Classes
 
 ### Overview:
