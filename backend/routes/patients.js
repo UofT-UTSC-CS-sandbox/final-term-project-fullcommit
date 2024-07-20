@@ -9,6 +9,7 @@ const {
 
 const router = express.Router();
 
+// We consider discard the patient part.
 router.get("/", getPatients);
 router.get("/:id", getPatient);
 router.post("/", createPatient);

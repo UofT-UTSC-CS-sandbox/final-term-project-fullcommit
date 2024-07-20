@@ -9,6 +9,7 @@ const {
 
 const router = express.Router();
 
+// We consider discard the medicine part.
 router.get("/", getMedicines);
 router.get("/:id", getMedicine);
 router.post("/", createMedicine);
