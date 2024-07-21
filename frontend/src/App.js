@@ -34,7 +34,7 @@ const App = () => {
             <li><Link to="/bed-availability">Bed Availability</Link></li>
             <li><Link to="/equipment-availability">Equipment Availability</Link></li>
             <li><Link to="/search-appointment">Search Appointment</Link></li>
-            <li><Link to="/appointment-details">Appointment Details</Link></li>
+            <li><Link to="/appointment-details">Appointment Details Sample</Link></li>
           </ul>
         </nav>
       </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { CssBaseline, Container, Box, TextField, Button, Typography } from '@mui/material';
-import Header from '../components/details/header';
-import DocumentTabs from '../components/details/tabs';
-import mockData from '../components/details/mockData';
-import '../components/details/styles.css';
+import Header from '../components/aptDetails/header';
+import DocumentTabs from '../components/aptDetails/tabs';
+import mockData from '../components/aptDetails/mockData';
+import '../components/aptDetails/styles.css';
 
 const AppointmentDetails = () => (
   <Container>
