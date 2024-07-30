@@ -44,6 +44,8 @@ app.use("/api/test", appointmentRoutes);
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 // Handle any other routes with the React app
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
