@@ -5,17 +5,20 @@ import PhysicianDirectory from './pages/PhysicianDirectory';
 import LogAppointmentPage from './pages/LogAppointmentPage';
 import SearchAppointment from './pages/SearchAppointment';
 import AppointmentDetails from './pages/AppointmentDetails';
+import './components/navbar.css'; 
 
 const App = () => {
   return (
     <Router>
       <div>
-        <h1>Hospital Management App</h1>
+        <header className="header">
+          <span className="plus-sign">+</span>
+          <h1>MedShare</h1>
+        </header>
         <nav>
           <ul>
             <li><Link to="/physician-profile/666dce53a537510a1ef36e65">Sample Physician Profile</Link></li>
             <li><Link to="/physician-directory">Physician Directory</Link></li>
-            <li><Link to="/equipment-availability">Equipment Availability</Link></li>
             <li><Link to="/log-appointment">Log Appointment</Link></li> {/* Add a link to Log Appointment */}
             <Link to="/search-appointment" className="home-button">Search Appointment</Link>
           </ul>

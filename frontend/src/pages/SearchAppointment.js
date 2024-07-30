@@ -15,7 +15,7 @@ const SearchAppointment = () => {
   useEffect(() => {
     const fetchAppointments = async () => {
       try {
-        const response = await axios.get('/api/appointments'); // Adjust endpoint as needed
+        const response = await axios.get('/api/appointments'); 
         setAppointments(response.data);
       } catch (error) {
         console.error("There was an error fetching the appointments!", error);
