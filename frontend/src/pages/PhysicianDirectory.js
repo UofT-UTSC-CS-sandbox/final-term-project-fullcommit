@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Grid, Paper, Typography } from '@mui/material';
 import SearchBar from '../components/PD/SearchBar';
 import FilterForm from '../components/physicianComponents/FilterForm';
@@ -12,6 +13,8 @@ const PhysicianDirectory = () => {
     department: "",
     role: "",
   });
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPhysicians = async () => {
@@ -51,8 +54,8 @@ const PhysicianDirectory = () => {
 
   const filtered = applyFilters(physicians);
 
-  const handleCardClick = (physicianName) => {
-    alert(`This leads to ${physicianName}'s profile page.`);
+  const handleCardClick = (physicianId) => {
+    navigate(`/physician-profile/${physicianId}`);
   };
 
   return (
@@ -65,7 +68,7 @@ const PhysicianDirectory = () => {
       <Grid container spacing={3} className="patient-grid">
         {filtered.map((physician) => (
           <Grid item xs={12} sm={6} md={4} key={physician.id}>
-            <PhysicianCard physician={physician} handleCardClick={handleCardClick} />
+            <PhysicianCard physician={physician} handleCardClick={() => handleCardClick(physician._id)} />
           </Grid>
         ))}
       </Grid>
