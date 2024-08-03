@@ -17,7 +17,7 @@ const App = () => {
         </header>
         <nav>
           <ul>
-            <li><Link to="/.">Login Page</Link></li>
+            <li><Link to="/.">"Login Page"</Link></li> /*TODO: Add login page link here*/
             <li><Link to="/physician-directory">Physician Directory</Link></li>
             <li><Link to="/log-appointment">Log Appointment</Link></li> {/* Add a link to Log Appointment */}
             <Link to="/search-appointment" className="home-button">Search Appointment</Link>
