@@ -5,12 +5,16 @@ require("dotenv").config();
 const express = require("express"); // Express framework for creating the server
 const mongoose = require("mongoose"); // Mongoose for connecting to MongoDB
 const path = require("path"); // Path module for handling file paths
+const fs = require('fs');
+const multer = require('multer');
+const { SpeechClient } = require('@google-cloud/speech');
+const wavFileInfo = require('wav-file-info');
 const patientRoutes = require("./routes/patients"); // patient routes
 const employeeRoutes = require("./routes/employees"); // employee routes
 const medicineRoutes = require("./routes/medicine"); // medicine routes
 const appointmentRoutes = require("./routes/appointmentRoutes"); // appointment routes
+const { exec } = require('child_process');
 const cors = require('cors'); // To handle CORS issues
-const fs = require('fs');
 
 // Ensure the uploads directory exists
 const uploadsDir = path.join(__dirname, 'uploads');
@@ -34,12 +38,90 @@ app.use((req, res, next) => {
   next(); // Move on to the next middleware or route handler
 });
 
+// Multer configuration for audio file uploads
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/');
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + path.extname(file.originalname));
+  }
+});
+
+const upload = multer({ storage: storage });
+
+// Google Cloud Speech-to-Text setup
+const speechClient = new SpeechClient({
+  keyFilename: path.join(__dirname, 'fullcommit-ba75fe0b0a4a.json')
+});
+
+const transcribeAudio = async (filePath, sampleRateHertz) => {
+  try {
+    const file = fs.readFileSync(filePath);
+    const audioBytes = file.toString('base64');
+
+    const request = {
+      audio: {
+        content: audioBytes,
+      },
+      config: {
+        encoding: 'LINEAR16',
+        sampleRateHertz: sampleRateHertz,
+        languageCode: 'en-US',
+      },
+    };
+
+    const [response] = await speechClient.recognize(request);
+    const transcription = response.results
+      .map(result => result.alternatives[0].transcript)
+      .join('\n');
+
+    return transcription;
+  } catch (error) {
+    console.error('Error transcribing audio:', error);
+    throw error;
+  }
+};
+
 // ROUTES
+app.post('/api/appointments/uploadAudio', upload.single('audio'), async (req, res) => {
+  try {
+    const filePath = req.file.path;
+    console.log('File path:', filePath);
+
+    // Convert audio to mono using ffmpeg
+    const monoFilePath = filePath.replace('.wav', '-mono.wav');
+    const ffmpegCommand = `ffmpeg -i ${filePath} -ac 1 ${monoFilePath}`;
+
+    exec(ffmpegCommand, async (err) => {
+      if (err) {
+        console.error('Error converting audio to mono:', err);
+        return res.status(500).json({ message: 'Error converting audio to mono', error: err });
+      }
+
+      wavFileInfo.infoByFilename(monoFilePath, async (err, info) => {
+        if (err) {
+          console.error('Error reading WAV file info:', err);
+          return res.status(500).json({ message: 'Error reading WAV file info', error: err });
+        }
+
+        const sampleRateHertz = info.header.sample_rate;
+        console.log('Sample rate:', sampleRateHertz);
+
+        const transcription = await transcribeAudio(monoFilePath, sampleRateHertz);
+
+        res.status(200).json({ message: 'Audio uploaded and transcribed successfully', transcription });
+      });
+    });
+  } catch (error) {
+    console.error('Error uploading and transcribing audio:', error);
+    res.status(500).json({ message: 'Error uploading and transcribing audio', error });
+  }
+});
 app.use("/api/patients", patientRoutes);
 app.use("/api/employees", employeeRoutes);
 app.use("/api/medicine", medicineRoutes);
 app.use("/api/appointments", appointmentRoutes);
-app.use("/api/test", appointmentRoutes);
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "../frontend/build")));

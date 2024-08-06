@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "fullcommit",
+  "private_key_id": "ba75fe0b0a4ae6d2e0210fbb2b0a2d3bc976cf58",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDEv+dbzp6TzHpu\nPoN8sPkn/45X0ymDjMf0EYcUhEf16oCoeVx358bq6IEF4Y/M1MEoF6N+zzJB/MPc\nBid1pzrG0o1IuHXFP0bLM8UWDpJQl04zDItx6RuFcxgsdtRohXPQuSoncdn0XfJT\noF+1oBfhKmZhottmy3tNUFcu2S4i+48sxjiGC1QwiE5nS/LUee7mAprittQniUkZ\nTHfd3lRdBFU88Z0N2TaflkOqYfIvwB2sPPLXES0vKKGd/990pSiPV6FWhb3varb9\njibUiaU1u5sR1AvGefQzpmTydNHWVK/vCpZlnrsT8loW1K2ajTWL84z/aJIDljcg\nfEIgbNQfAgMBAAECggEAH8p4WjvFINGZ+MVOHrBD2iQvfl5m51QwnO3WG0kSjZhS\nKKbPe6puWFewPWCIiUrZWR6UsvFMyB/ND/jImHiohSbRYG45zWDfkgbv8hPxrWb9\nYj9FKudFJKeHwOuEf80MfS3mM1BwrM0fUkboICNZqG7e8yjK9c2sQz5XkADUtR8S\niSS+5Tg9uNNW0irpa8JmWqpmlwFdSVqDN9s/NQ5jVtIJ0x8bY/t1c0YyDY/ZBw44\n5jfTDMWHUeDgSm3/XgOSNZyY7As04dqnJDyukzobVL/BTrzVf0SHSU2f6eVbnWGp\nQSNs2RgG3thJ0u7jybFw1uHslCBXGmtuWPou1y2j/QKBgQD/2+qkogkfhZ116HJQ\nJqRjnNZYjEMWkkJYIPnDJJvDkrl/yVAhSnf/+9CJ79cbIO0cfBlGKrBChX67uxIY\nnrKh8kVslnA69++5k1ZQE2CeCvHzph5OHHwFGooBZjynIrw+XIk1r61lKH0BG/BB\nMEHQJDDQ2iKUGc0UkcrNd7o2gwKBgQDE26arhb9W4rYnKRJupomk7w4IyqlzOlw2\npSykG7KnrcTXSPzpn7OEuyh1vh9kge1LwcaL3Z71lHg6AfZgM3H7h+9SJMHbLe77\nK1fvgwbCOU16cYt0DI1mB9Dfk5YP00tPdEtlRGiK+YMioSl5RjU9MdUMYX65ilSO\npUJ8OqRZNQKBgQCDoOwSTppK8T6UzkUhHwArjyBm5aIOFqizFiPoVQkdkHqGV1c2\nCU27EB21GQKdHk9d/Co0gvmy/2K3ygIBUIOt9SnqN2r9q1hVLIuXHqDyLcdUBf5J\nSTY0mfatyZ8ijSgzHQAp8ntOM4o769eqcd0p67SBffeUIcHz9x1Sn2nZaQKBgQCx\nS2IAeKSrC+QhwMvo+/RbpzFsmZmjPZxvWrOp2Yg9nDL78bBWeI6lrCn0YRbE3n9p\nC0xWC3NumhjtpXbPjYXKk9LmmFQ/ok7px0+bVtZvdkxhSoHeMq/mhIOJ2NH9zr61\nAHgm7EV7ZNzGA3/myWSJiKfoTqZjVEJzdkM6v1XlQQKBgQD1/O/R/KuiiZIJDQ6p\ncMhG1q4dt3gCbz6l0bweUF+LIUvz/X3cg5dAxf89YdNe1jj4lYZkU/ypucxfo8BR\nDyDghHvNIoqH8xPMjQcfafBL9WxDhINCwNnazSMaO9mwNnZblaGkdTT6Hjt+5DEB\nrZxx3+KpskKtyhTQ2civce09pg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "fullcommit2024@fullcommit.iam.gserviceaccount.com",
+  "client_id": "106993886997399224142",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/fullcommit2024%40fullcommit.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
