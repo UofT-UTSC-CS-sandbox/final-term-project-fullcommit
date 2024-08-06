@@ -70,3 +70,38 @@ exports.logAppointment = (req, res) => {
         }
     });
 };
+
+/**
+ * Get all appointments
+ * @route GET /appointments
+ * @desc Retrieves all appointments
+ * @access Public
+ */
+exports.getAppointments = async (req, res) => {
+    try {
+        const appointments = await Appointment.find().populate('files'); // Optionally populate files if needed
+        res.status(200).json(appointments);
+    } catch (error) {
+        console.error('Error retrieving appointments:', error);
+        res.status(500).json({ message: 'Error retrieving appointments', error });
+    }
+};
+
+/**
+ * Get a single appointment by ID
+ * @route GET /appointments/:id
+ * @desc Retrieves a single appointment by its ID
+ * @access Public
+ */
+exports.getAppointmentById = async (req, res) => {
+    try {
+        const appointment = await Appointment.findById(req.params.id).populate('files');
+        if (!appointment) {
+            return res.status(404).json({ message: 'Appointment not found' });
+        }
+        res.status(200).json(appointment);
+    } catch (error) {
+        console.error('Error retrieving appointment:', error);
+        res.status(500).json({ message: 'Error retrieving appointment', error });
+    }
+};
