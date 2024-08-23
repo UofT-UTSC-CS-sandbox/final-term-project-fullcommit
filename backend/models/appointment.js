@@ -7,7 +7,8 @@ const appointmentSchema = new mongoose.Schema({
     diagnosis: { type: String },
     files: [{ type: mongoose.Schema.Types.ObjectId, ref: 'File' }],
     notes: [{ type: String }],
-    comments: [{ type: String }]
+    comments: [{ type: String }],
+    transcript: { type: String }
 });
 
 const Appointment = mongoose.model('Appointment', appointmentSchema);

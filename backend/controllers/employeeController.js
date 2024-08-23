@@ -32,8 +32,7 @@ const getEmployee = async (req, res) => {
 // CREATE new employee in db
 const createEmployee = async (req, res) => {
   const {
-    firstName,
-    lastName,
+    name,
     dateOfBirth,
     contactNumber,
     email,
@@ -48,8 +47,7 @@ const createEmployee = async (req, res) => {
 
   try {
     const employee = await Employee.create({
-      firstName,
-      lastName,
+      name,
       dateOfBirth,
       contactNumber,
       email,

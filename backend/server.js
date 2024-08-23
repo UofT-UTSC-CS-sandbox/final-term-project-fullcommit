@@ -15,6 +15,15 @@ const medicineRoutes = require("./routes/medicine"); // medicine routes
 const appointmentRoutes = require("./routes/appointmentRoutes"); // appointment routes
 const { exec } = require('child_process');
 const cors = require('cors'); // To handle CORS issues
+const fs = require('fs');
+const multer = require('multer');
+const { SpeechClient } = require('@google-cloud/speech');
+const wavFileInfo = require('wav-file-info');
+const { exec } = require('child_process'); // Import exec for running shell commands
+const { promisify } = require('util'); // Import promisify to handle async/await with exec
+
+const execAsync = promisify(exec); // Convert exec to a promise-based function
+const Appointment = require('./models/appointment');
 
 // Ensure the uploads directory exists
 const uploadsDir = path.join(__dirname, 'uploads');
@@ -83,6 +92,41 @@ const transcribeAudio = async (filePath, sampleRateHertz) => {
   }
 };
 
+app.post('/api/appointments/uploadAudio', upload.single('audio'), async (req, res) => {
+  try {
+    const filePath = req.file.path;
+    console.log('File path:', filePath);
+
+    // Convert audio to mono using ffmpeg
+    const monoFilePath = filePath.replace('.wav', '-mono.wav');
+    const ffmpegCommand = `ffmpeg -i ${filePath} -ac 1 ${monoFilePath}`;
+
+    await execAsync(ffmpegCommand); // Use the promisified execAsync
+
+    wavFileInfo.infoByFilename(monoFilePath, async (err, info) => {
+      if (err) {
+        console.error('Error reading WAV file info:', err);
+        return res.status(500).json({ message: 'Error reading WAV file info', error: err });
+      }
+
+      const sampleRateHertz = info.header.sample_rate;
+      console.log('Sample rate:', sampleRateHertz);
+
+      const transcription = await transcribeAudio(monoFilePath, sampleRateHertz);
+
+      // Save the transcript to the appointment in the database
+      const appointmentId = req.body.appointmentId; // Ensure the appointment ID is sent with the request
+      await Appointment.findByIdAndUpdate(appointmentId, { transcript: transcription });
+      console.log('Updating appointment with ID:', appointmentId);
+
+      res.status(200).json({ message: 'Audio uploaded and transcribed successfully', transcription });
+    });
+  } catch (error) {
+    console.error('Error uploading and transcribing audio:', error);
+    res.status(500).json({ message: 'Error uploading and transcribing audio', error });
+  }
+});
+
 // ROUTES
 app.post('/api/appointments/uploadAudio', upload.single('audio'), async (req, res) => {
   try {
@@ -125,6 +169,8 @@ app.use("/api/appointments", appointmentRoutes);
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Handle any other routes with the React app
 app.get("*", (req, res) => {

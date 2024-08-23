@@ -1,0 +1,14 @@
+.headerCard {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .docCard {
+    margin: 10px;
+    display: inline-block;
+    width: 45%;
+  }
+  
+  .docCard:nth-of-type(odd) {
+    margin-right: 5%;
+  }

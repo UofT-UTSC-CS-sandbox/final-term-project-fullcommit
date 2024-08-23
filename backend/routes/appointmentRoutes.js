@@ -34,4 +34,17 @@ router.post('/uploadTest', (req, res) => {
     });
 });
 
+
+// Get all appointments
+// @route GET /appointments
+// @desc Get all appointments
+// @access Public
+router.get('/', appointmentController.getAppointments);
+
+// Get a single appointment by ID
+// @route GET /appointments/:id
+// @desc Get a single appointment by ID
+// @access Public
+router.get('/:id', appointmentController.getAppointmentById);
+
 module.exports = router;
