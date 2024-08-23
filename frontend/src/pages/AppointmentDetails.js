@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { CssBaseline, Container, Box, TextField, Button, Typography } from '@mui/material';
+import { CssBaseline, Container, Box, Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import Header from '../components/aptDetails/header';
 import DocumentTabs from '../components/aptDetails/tabs';
@@ -45,6 +45,14 @@ const AppointmentDetails = () => {
         status={appointment.outcome}
       />
       <DocumentTabs documents={appointment.files} />
+
+      {/* Display the transcript if it exists */}
+      <Box mt={4}>
+        <Typography variant="h6">Transcript</Typography>
+        <Typography variant="body1">
+          {appointment.transcript ? appointment.transcript : "No transcript available."}
+        </Typography>
+      </Box>
     </Container>
   );
 };

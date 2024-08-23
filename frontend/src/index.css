@@ -258,3 +258,22 @@ header a {
 .log-appointment-form button:hover {
   background-color: #137e60;
 }
+
+.transcription {
+  background: #f9f9f9;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.transcription h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.transcription p {
+  margin: 0;
+  font-size: 1em;
+  color: #555;
+}

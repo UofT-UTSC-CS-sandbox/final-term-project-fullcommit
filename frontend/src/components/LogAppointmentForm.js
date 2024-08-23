@@ -8,10 +8,16 @@ const LogAppointmentForm = () => {
     const [outcome, setOutcome] = useState('Diagnosed');
     const [diagnosis, setDiagnosis] = useState('');
     const [files, setFiles] = useState([]);
+    const [audioFile, setAudioFile] = useState(null);
+    const [transcription, setTranscription] = useState('');
 
     // Handle file input change
     const handleFileChange = (e) => {
         setFiles(e.target.files);
+    };
+
+    const handleAudioChange = (e) => {
+        setAudioFile(e.target.files[0]);
     };
 
     // Handle form submission
@@ -42,6 +48,24 @@ const LogAppointmentForm = () => {
         } catch (error) {
             console.error('Error logging appointment', error);
             alert('Error logging appointment');
+        }
+
+        if (audioFile) {
+            const audioFormData = new FormData();
+            audioFormData.append('audio', audioFile);
+            try {
+                const audioResponse = await axios.post('http://localhost:3000/api/appointments/uploadAudio', audioFormData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                });
+                console.log(audioResponse.data);
+                setTranscription(audioResponse.data.transcription);
+                alert('Audio uploaded and transcribed successfully');
+            } catch (error) {
+                console.error('Error uploading and transcribing audio', error);
+                alert('Error uploading and transcribing audio');
+            }
         }
     };
 
@@ -97,8 +121,23 @@ const LogAppointmentForm = () => {
                 onChange={handleFileChange}
             />
             
+            <label htmlFor="audio">Upload Audio:</label>
+             <input
+                 type="file"
+                 id="audio"
+                 accept="audio/*"
+                 onChange={handleAudioChange}
+             />
+
             {/* Submit Button */}
             <button type="submit">Log Appointment</button>
+
+            {transcription && (
+                 <div className="transcription">
+                     <h3>Transcription:</h3>
+                     <p>{transcription}</p>
+                 </div>
+            )}
         </form>
     );
 };
