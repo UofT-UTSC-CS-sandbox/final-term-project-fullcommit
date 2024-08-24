@@ -1,0 +1,106 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+
+const LogAppointmentForm = () => {
+    // State variables to hold form data
+    const [patientName, setPatientName] = useState('');
+    const [dateOfAppointment, setDateOfAppointment] = useState('');
+    const [outcome, setOutcome] = useState('Diagnosed');
+    const [diagnosis, setDiagnosis] = useState('');
+    const [files, setFiles] = useState([]);
+
+    // Handle file input change
+    const handleFileChange = (e) => {
+        setFiles(e.target.files);
+    };
+
+    // Handle form submission
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // Create a FormData object to hold the form data and files
+        const formData = new FormData();
+        formData.append('patientName', patientName);
+        formData.append('dateOfAppointment', dateOfAppointment);
+        formData.append('outcome', outcome);
+        formData.append('diagnosis', diagnosis);
+
+        // Append each file to the FormData object
+        for (let i = 0; i < files.length; i++) {
+            formData.append('files', files[i]);
+        }
+
+        // Send a POST request to log the appointment
+        try {
+            const response = await axios.post('http://localhost:3000/api/appointments/logAppointment', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+            console.log(response.data);
+            alert('Appointment logged successfully');
+        } catch (error) {
+            console.error('Error logging appointment', error);
+            alert('Error logging appointment');
+        }
+    };
+
+    return (
+        <form className="log-appointment-form" onSubmit={handleSubmit}>
+            {/* Patient Name Input */}
+            <label htmlFor="patientName">Patient Name:</label>
+            <input
+                type="text"
+                id="patientName"
+                value={patientName}
+                onChange={(e) => setPatientName(e.target.value)}
+                required
+            />
+            
+            {/* Date of Appointment Input */}
+            <label htmlFor="dateOfAppointment">Date of Appointment:</label>
+            <input
+                type="date"
+                id="dateOfAppointment"
+                value={dateOfAppointment}
+                onChange={(e) => setDateOfAppointment(e.target.value)}
+                required
+            />
+            
+            {/* Outcome Select */}
+            <label htmlFor="outcome">Outcome:</label>
+            <select
+                id="outcome"
+                value={outcome}
+                onChange={(e) => setOutcome(e.target.value)}
+                required
+            >
+                <option value="Diagnosed">Diagnosed</option>
+                <option value="Undiagnosed">Undiagnosed</option>
+            </select>
+            
+            {/* Diagnosis Input */}
+            <label htmlFor="diagnosis">Diagnosis:</label>
+            <input
+                type="text"
+                id="diagnosis"
+                value={diagnosis}
+                onChange={(e) => setDiagnosis(e.target.value)}
+            />
+            
+            {/* File Upload Input */}
+            <label htmlFor="files">Upload Files:</label>
+            <input
+                type="file"
+                id="files"
+                multiple
+                onChange={handleFileChange}
+            />
+            
+            {/* Submit Button */}
+            <button type="submit">Log Appointment</button>
+        </form>
+    );
+};
+
+export default LogAppointmentForm;

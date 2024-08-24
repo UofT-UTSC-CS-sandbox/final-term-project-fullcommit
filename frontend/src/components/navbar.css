@@ -1,0 +1,60 @@
+/* navbar.css */
+
+nav {
+    background-color: #4CAF50; /* Green background */
+    overflow: hidden;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-evenly; /* Evenly space the links */
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    float: left;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: white; /* White text color */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none; /* Remove underline */
+  }
+  
+  nav ul li a:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+  }
+  
+  .home-button {
+    display: inline-block;
+    padding: 14px 20px;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .home-button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center; /* Center the title */
+    align-items: center;
+    padding: 20px;
+    background-color: #4CAF50; /* Optional: match navbar background */
+    color: white; /* Title color */
+    font-size: 24px; /* Title font size */
+  }
+  
+  .header .plus-sign {
+    color: red; /* Red color for plus sign */
+    font-weight: bold;
+    margin-right: 10px; /* Space between the plus sign and title */
+  }
+  
